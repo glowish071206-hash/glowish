@@ -1,0 +1,28 @@
+<script>
+    // Tạo player Preview
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer-container'),
+        video: {
+            url: 'duong-dan-video-thu.mp4',       // Video preview (360p - dung lượng nhẹ)
+            pic: 'duong-dan-anh-bia.jpg',         // Ảnh bìa
+            type: 'auto'
+        },
+        // Cấu hình cho các chất lượng khác (quan trọng nếu bạn muốn để sẵn nhiều nấc)
+        quality: [
+            {
+                name: '1080P - Gốc (Sau khi mua)',
+                url: 'duong-dan-video-goc-1080p.mp4',
+                type: 'auto'
+            },
+            {
+                name: '720P - Xem thử',
+                url: 'duong-dan-video-thu-720p.mp4',
+                type: 'auto'
+            }
+        ],
+        autoplay: false,      // Không tự động chạy để tránh ồn
+        loop: false,
+        hotkey: true,         // Cho phép bật tắt bằng phím tắt
+        lang: 'en'           // Ngôn ngữ (có thể chọn 'vi' nếu dùng bản đầy đủ)
+    });
+</script>
